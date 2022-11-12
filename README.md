@@ -6,7 +6,7 @@ Proyecto Programación Orientada a objetos (lenguaje Java) con finalidad Docente
 1. Se quiere realizar una aplicación para un comercial de productos de farmacia y parafarmacia, que le permita llevar las ventas.   
 1. La aplicación será para un único comercial.
 1. Los Propietarios solo pueden tener un `Negocio` (farmacia o Parafarmacia) pero se desea que cada `Propietario` haga muchos **Pedidos** al comercial.  
-1. Un `Negocio` al menos tendrán un `nombre` una `dirección` y una serie de `Coperativas` con las que trabajan.  
+1. Un `Negocio` al menos tendrán un `nombre` una `dirección`, una serie de `Coperativas` con las que trabajan y un `Poc` (_persona de contacto_) que es la persona con la que se comunica el comercial.  
 1. El `Pedido` que hace un `Propietario` de un `Negocio` se entregaran a los Propietarios en papel (mostrar en consola)  con los siguientes datos:
     * `fecha del pedido`  
     * `Precio total` con IVA (10%) y sin IVA del pedido
