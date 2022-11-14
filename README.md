@@ -32,3 +32,6 @@ Proyecto Programación Orientada a objetos (lenguaje Java) con finalidad Docente
 - Busquen al máximo la simplicidad, el objetivo es prácticar _fundamentos de java, La Progrmación Orientada a Objetos, las Colecciones, Herencias, Interfaces etc_ que se han visto en el [temario](https://slides.com/kzurro) 
 -  En el ejemplo de pedido aparecen más datos que en el diseño que muestra el [diagrama](https://github.com/kzurro/Pillo-Comercial/blob/main/diagramas/pillo_comercial.drawio). Queda a criterio del alumno crear más clases ee interfaces, o incluso disminuirlas, cambiar tipos de los atributos, añadir más atributos y métodos.
 - Cualquier duda con el enunciado hagan un `issue`.
+
+
+<img src="assets/diagrama.png" alt="Farmacia" title="Practica Farmacia">
