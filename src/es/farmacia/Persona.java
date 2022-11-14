@@ -4,7 +4,6 @@ public class Persona {
 	
 	private String nombre;
 	private String NIF;
-	private String telf;
 	
 	
 	public Persona() {
@@ -12,35 +11,26 @@ public class Persona {
 		
 	}
 	
-	public Persona(String telf) {
-			
-			this.telf = telf;
-			
-			
-			
-	}
+	public Persona(String nombre) {
+		
 
+		this.nombre = nombre;
+		
+		
+		
+	}
 	
-	public Persona(String nombre, String telf) {
+	public Persona(String nombre, String NIF) {
 		
 
 		this.nombre = nombre;
-		this.telf = telf;
-		
-		
-		
-	}
-
-	public Persona(String nombre, String NIF, String telf) {
-		
-		
 		this.NIF = NIF;
-		this.nombre = nombre;
-		this.telf = telf;
 		
 		
 		
 	}
+
+
 
 	public String getNombre() {
 		return nombre;
@@ -50,9 +40,7 @@ public class Persona {
 		return NIF;
 	}
 
-	public String getTelf() {
-		return telf;
-	}
+
 
 	protected void setNombre(String nombre) {
 		this.nombre = nombre;
@@ -62,13 +50,11 @@ public class Persona {
 		NIF = nIF;
 	}
 
-	protected void setTelf(String telf) {
-		this.telf = telf;
-	}
+
 
 	@Override
 	public String toString() {
-		return "Persona [nombre=" + nombre + ", NIF=" + NIF + ", telf=" + telf + "]";
+		return "Persona [nombre=" + nombre + ", NIF=" + NIF + "]";
 	}
 	
 	
