@@ -1,4 +1,4 @@
-package src;
+package es.farmacia;
 
 public class AppFarmacia {
 
