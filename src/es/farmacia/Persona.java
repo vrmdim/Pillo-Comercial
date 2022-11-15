@@ -1,6 +1,7 @@
 package es.farmacia;
 
-public class Persona {
+public abstract class Persona implements Nombrable{
+	
 	
 	private String nombre;
 	private String NIF;
@@ -8,11 +9,9 @@ public class Persona {
 	
 	public Persona() {
 		
-		
 	}
 	
 	public Persona(String nombre) {
-		
 
 		this.nombre = nombre;
 		
@@ -31,13 +30,13 @@ public class Persona {
 	}
 
 
-
+	@Override
 	public String getNombre() {
-		return nombre;
+		return this.nombre;
 	}
 
 	public String getNIF() {
-		return NIF;
+		return this.NIF;
 	}
 
 
@@ -46,8 +45,8 @@ public class Persona {
 		this.nombre = nombre;
 	}
 
-	protected void setNIF(String nIF) {
-		NIF = nIF;
+	protected void setNIF(String NIF) {
+		this.NIF = NIF;
 	}
 
 
