@@ -70,6 +70,15 @@ public class Negocio implements Nombrable{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Negocio [nombre=" + nombre + ", direccion=" + direccion + ", poc=" + poc + ", cooperativa="
+				+ cooperativa + "]";
+	}
+	
+	
 	
 	
 
