@@ -4,12 +4,16 @@ public class Cooperativa implements Nombrable{
 
 	private String nombre;
 	
-	
+	public Cooperativa(String nombre) {
+		
+		this.nombre = nombre;
+		
+	}
 	
 	@Override
 	public String getNombre() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.nombre;
 	}
 
 

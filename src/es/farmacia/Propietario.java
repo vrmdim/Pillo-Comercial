@@ -21,6 +21,14 @@ public class Propietario extends Persona{
 		super(nombre, NIF);
 		
 	}
+	
+	
+	public Propietario(String nombre, String NIF, Negocio negocio) {
+		
+		super(nombre, NIF);
+		this.negocio = negocio;
+		
+	}
 
 	
 	

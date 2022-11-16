@@ -5,11 +5,6 @@ public class PoC extends Persona implements Llamable{
 	
 	private String telf;
 	
-	public PoC(String telf) {
-		
-		this.telf = telf;
-		
-	}
 	
 	public PoC(String nombre, String telf) {
 		
