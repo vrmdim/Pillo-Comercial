@@ -2,7 +2,6 @@ package es.farmacia;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -32,7 +31,7 @@ public class Pedido implements Datable{
 		setNumLineas();
 		
 		// ACTUALIZAMOS PRECIO TOTAL DEL PEDIDO
-		
+		setPrecioPedido();
 		
 	}
 
@@ -116,12 +115,13 @@ public class Pedido implements Datable{
 	// CALCULAMOS PRECIO TOTAL SIN IVA DEL ArrayList lineasPedido.
 	private void setPrecioPedido() {
 		
-		double resultadoPrecioPedido;
+		double resultadoPrecioPedido = 0;
 		
-		for (Iterator iterator = lineasPedido.iterator(); iterator.hasNext();) {
-			LineaPedido lineaPedido = (LineaPedido) iterator.next();
+		for (LineaPedido lineaPedido : lineasPedido) {
 			
-		} 
+			resultadoPrecioPedido += lineaPedido.getPrecioLinea();
+			
+		}
 		
 		this.precioPedido = resultadoPrecioPedido;
 	}
