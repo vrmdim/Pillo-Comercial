@@ -7,9 +7,6 @@ public abstract class Persona implements Nombrable{
 	private String NIF;
 	
 	
-	public Persona() {
-		
-	}
 	
 	public Persona(String nombre) {
 

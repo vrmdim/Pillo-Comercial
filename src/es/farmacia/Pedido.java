@@ -37,15 +37,23 @@ public class Pedido implements Datable{
 
 	public void imprimirPedido() {
 		
-		System.out.println("RESUMEN DEL PEDIDO");
-		System.out.println("------------------");
+		System.out.println("----------------------");
+		System.out.println("- RESUMEN DEL PEDIDO -");
+		System.out.println("----------------------");
 		System.out.println();
 		System.out.println("> Fecha Pedido: " + getfPedido());
-		System.out.println("> Precio Total: " + getPrecioPedido());
-		System.out.println("> Precio Total con IVA: " + calcPrecioConIVA(precioPedido));
+		System.out.println("> Precio Total: " + getPrecioPedido() + "Euros.");
+		System.out.println("> Precio Total con IVA: " + calcPrecioConIVA(precioPedido) + "Euros.");
 		System.out.println("> Total productos: " + getNumLineas());
-		System.out.println("> ");
-		
+		System.out.println("> Desglose precios:");
+		// Precio sin IVA de cada linea
+		for (LineaPedido lineaPedido : lineasPedido) {
+			System.out.println("   >>> " + lineaPedido.getCantidad() + " x " + lineaPedido.getProducto().getNombre()
+					+ " = " + lineaPedido.getPrecioLinea() + " Euros.");
+		}
+		System.out.println("> " + getPropietario().getNombre());
+		System.out.println("> Cooperativa: " + getPropietario().getNegocio().getCooperativa().getNombre());
+
 		
 	}
 	
