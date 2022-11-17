@@ -60,7 +60,7 @@ public class Producto implements Nombrable{
 	@Override
 	public String getNombre() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.nombre;
 	}
 
 	@Override

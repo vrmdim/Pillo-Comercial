@@ -9,20 +9,22 @@ public class LineaPedido {
 	
 	
 	// CONSTRUCTORES
-	public LineaPedido(int cantidad, double precioLinea) {
+	public LineaPedido(int cantidad, Producto producto) {
 		
 		this.cantidad = cantidad;
-		this.precioLinea = precioLinea;
+		this.producto = producto;
+		setPrecioLinea();
 		// PONEMOS DESCUENTO A 0
 		setDescuento(0);
 		
 	}
 	
-	public LineaPedido(int cantidad, double descuento, double precioLinea) {
+	public LineaPedido(int cantidad, double descuento, Producto producto) {
 		
 		this.cantidad = cantidad;
-		this.descuento = descuento;
-		this.precioLinea = precioLinea;
+		this.producto = producto;
+		setDescuento(descuento);
+		setPrecioLinea();
 		
 	}
 	
@@ -50,8 +52,10 @@ public class LineaPedido {
 		this.cantidad = cantidad;
 	}
 
-	protected void setPrecioLinea(double precioLinea) {
-		this.precioLinea = precioLinea;
+	private void setPrecioLinea() {
+		
+		this.precioLinea = this.getProducto().getPrecio()*this.getCantidad()*(100-this.getDescuento())/100;
+		
 	}
 
 	protected void setProducto(Producto producto) {

@@ -1,5 +1,6 @@
 package es.farmacia;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,9 @@ public class Pedido implements Datable{
 		// ACTUALIZAMOS PRECIO TOTAL DEL PEDIDO
 		setPrecioPedido();
 		
+		// ADD PEDIDO A LA LISTA DE PEDIDOS DEL PROPIETARIO
+		propietario.setPedidos(this);
+		
 	}
 
 	public void imprimirPedido() {
@@ -42,18 +46,22 @@ public class Pedido implements Datable{
 		System.out.println("----------------------");
 		System.out.println();
 		System.out.println("> Fecha Pedido: " + getfPedido());
-		System.out.println("> Precio Total: " + getPrecioPedido() + "Euros.");
-		System.out.println("> Precio Total con IVA: " + calcPrecioConIVA(precioPedido) + "Euros.");
+		System.out.println("> Precio Total: " + getPrecioPedido() + " Euros.");
+		// LIMITAMOS EL NUMERO DE DECIMALES A DOS
+		DecimalFormat df = new DecimalFormat("#.##");
+		System.out.println("> Precio Total con IVA: " + df.format(calcPrecioConIVA(precioPedido)) + " Euros.");
 		System.out.println("> Total productos: " + getNumLineas());
 		System.out.println("> Desglose precios:");
 		// Precio sin IVA de cada linea
 		for (LineaPedido lineaPedido : lineasPedido) {
 			System.out.println("   >>> " + lineaPedido.getCantidad() + " x " + lineaPedido.getProducto().getNombre()
-					+ " = " + lineaPedido.getPrecioLinea() + " Euros.");
+					+ " = " + lineaPedido.getPrecioLinea() + " Euros.  Descuento aplicado: " + lineaPedido.getDescuento() + "%");
 		}
-		System.out.println("> " + getPropietario().getNombre());
+		System.out.println("> Propietario: " + getPropietario().getNombre());
 		System.out.println("> Cooperativa: " + getPropietario().getNegocio().getCooperativa().getNombre());
-
+		System.out.println();
+		System.out.println("----------------------");
+		System.out.println("----------------------");
 		
 	}
 	
@@ -61,9 +69,10 @@ public class Pedido implements Datable{
 	// METODO PARA CALCULAR PRECIO CON IVA
 	private double calcPrecioConIVA(double precio) {
 		
+		
 		double precioConIVA;
 		
-		precioConIVA = precio*((this.IVA+100)/10);
+		precioConIVA = precio*((this.IVA+100)/100);
 		
 		return precioConIVA;
 		
