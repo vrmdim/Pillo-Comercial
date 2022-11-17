@@ -33,5 +33,5 @@ Proyecto Programación Orientada a objetos (lenguaje Java) con finalidad Docente
 -  En el ejemplo de pedido aparecen más datos que en el diseño que muestra el [diagrama](https://github.com/kzurro/Pillo-Comercial/blob/main/diagramas/pillo_comercial.drawio). Queda a criterio del alumno crear más clases ee interfaces, o incluso disminuirlas, cambiar tipos de los atributos, añadir más atributos y métodos.
 - Cualquier duda con el enunciado hagan un `issue`.
 
-
+## Diagrama de clases
 <img src="assets/diagrama.png" alt="Farmacia" title="Practica Farmacia">
